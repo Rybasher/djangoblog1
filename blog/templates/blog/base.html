@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
@@ -12,7 +14,9 @@
 </head>
 <body>
  <div class="page-header">
+     {% if user.is_authenticated %}
      <h1><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus">New Post</span></a></h1>
+     {% endif %}
         <h1><a href="/">Django Girls Blog</a></h1>
 
     </div>
